@@ -1,0 +1,76 @@
+{
+  "name": "react-history-store",
+  "version": "0.1.0",
+  "description": "A library to manage history stack for React",
+  "main": "dist/react-history-store.js",
+  "umd:main": "dist/react-history-store.js",
+  "module": "dist/react-history-store.mjs",
+  "source": "index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle --no-compress --no-sourcemap",
+    "dev": "microbundle watch",
+    "test": "jest --coverage",
+    "lint": "eslint src/**/*.{js,ts,tsx}",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chersquwn/react-history-store"
+  },
+  "keywords": [
+    "history",
+    "react",
+    "history-store"
+  ],
+  "author": "Chersquwn <Chersquwn@163.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "bugs": {
+    "url": "https://github.com/Chersquwn/react-history-store/issues"
+  },
+  "homepage": "https://github.com/Chersquwn/react-history-store#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@types/jest": "^24.0.13",
+    "@types/react": "^16.8.19",
+    "@types/react-router-dom": "^4.3.3",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-chersquwn": "^1.2.3",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^8.1.7",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.17.1",
+    "typescript": "^3.4.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6",
+    "react-router-dom": "^5.0.1"
+  }
+}
